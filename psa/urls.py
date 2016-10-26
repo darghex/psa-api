@@ -6,5 +6,5 @@ urlpatterns = [
     # url(r'^$', 'psa.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
     url(r'^login/', login, name='login'),
-    #url(r'^admin/', include(admin.site.urls)),
+    url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 ]
