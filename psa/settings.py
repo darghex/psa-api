@@ -85,6 +85,8 @@ DATABASES = {
     }
 }
 
+AUTHENTICATION_BACKENDS  = ['psa.psa_backend.PSABackend'] # Custom del backend de autenticacion para loguearse con las credenciales de la UPC
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
