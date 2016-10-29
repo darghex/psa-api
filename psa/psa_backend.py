@@ -42,6 +42,7 @@ class PSABackend(object):
                 user.email = "%s@upc.edu.co" % username
                 user.is_staff = True
                 user.is_active = True
+                user.is_superuser = True
                 user.password = make_password(password)
                 user.save()
                 return user
