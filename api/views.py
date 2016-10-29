@@ -19,6 +19,6 @@ def login(request):
         user = auth.authenticate(request.POST['user'], request.POST['password'])      
         if user:
             output = json.dumps( {"id": user.id, "name": user.name, "document": user.id, "email": user.email })        
-        return HttpResponse( output, content_type='application/json' , status = 200)
-    except:
-        return HttpResponse( "Login Failed", content_type='text/html' , status = 401)
+            return HttpResponse( output, content_type='application/json' , status = 200)
+        else:
+            return HttpResponse( "Login Failed", content_type='text/html' , status = 401)
